@@ -1,0 +1,5 @@
+model,accuracy_pct,macro_f1,macro_precision,macro_recall,roc_auc,training_time_s,source_note
+Custom CNN,97.8,0.976,0.979,0.974,0.998,312.4,Reported in manuscript Table 4
+MobileNetV2,91.2,0.908,0.915,0.903,0.981,1847.3,Reported in manuscript Table 4
+MobileNetV3Small,94.6,0.943,0.948,0.939,0.991,2134.6,Reported in manuscript Table 4
+EfficientNetB0,88.7,0.881,0.889,0.874,0.972,2891.5,Reported in manuscript Table 4
