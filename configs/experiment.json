@@ -1,0 +1,83 @@
+{
+  "seed": 42,
+  "image_size": [
+    224,
+    224
+  ],
+  "batch_size": 32,
+  "class_names": [
+    "Common_Rust",
+    "Gray_Leaf_Spot",
+    "Healthy",
+    "Northern_Leaf_Blight"
+  ],
+  "class_aliases": {
+    "Common_Rust": [
+      "Common_Rust",
+      "Common Rust"
+    ],
+    "Gray_Leaf_Spot": [
+      "Gray_Leaf_Spot",
+      "Gray Leaf Spot"
+    ],
+    "Healthy": [
+      "Healthy"
+    ],
+    "Northern_Leaf_Blight": [
+      "Northern_Leaf_Blight",
+      "Northern Leaf Blight",
+      "Blight"
+    ]
+  },
+  "paths": {
+    "primary_root": "data/primary",
+    "split_dir": "data/splits",
+    "models_dir": "models",
+    "results_dir": "results"
+  },
+  "split": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "augmentation": {
+    "horizontal_flip": true,
+    "vertical_flip": true,
+    "brightness_delta": 0.2,
+    "contrast_lower": 0.8,
+    "contrast_upper": 1.2,
+    "saturation_lower": 0.8,
+    "saturation_upper": 1.2,
+    "pad_resize": [
+      240,
+      240
+    ],
+    "random_crop": [
+      224,
+      224
+    ]
+  },
+  "training": {
+    "phase1_epochs": 10,
+    "phase2_epochs": 25,
+    "custom_cnn_epochs": 35,
+    "phase1_learning_rate": 0.001,
+    "phase2_learning_rate": 1e-05,
+    "early_stopping_patience": 7,
+    "reduce_lr_factor": 0.5,
+    "reduce_lr_patience": 3,
+    "fine_tune_fraction": 0.3
+  },
+  "quantization": {
+    "representative_samples": 100
+  },
+  "scorecam": {
+    "channels": 50,
+    "overlay_alpha": 0.45
+  },
+  "iot": {
+    "mqtt_port": 1883,
+    "telemetry_topic": "v1/devices/me/telemetry",
+    "high_confidence_threshold": 0.8
+  }
+}
