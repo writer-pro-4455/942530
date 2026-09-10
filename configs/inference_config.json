@@ -1,0 +1,26 @@
+{
+  "model_type": "tflite_int8_or_float",
+  "input_size": [
+    224,
+    224,
+    3
+  ],
+  "normalization": "divide_by_255",
+  "class_names": [
+    "Common_Rust",
+    "Gray_Leaf_Spot",
+    "Healthy",
+    "Northern_Leaf_Blight"
+  ],
+  "alert_policy": {
+    "healthy_class": "Healthy",
+    "high_threshold": 0.8,
+    "disease_high": "HIGH",
+    "disease_low": "MEDIUM",
+    "healthy": "NONE"
+  },
+  "notes": [
+    "Environmental telemetry is not an input to the classifier.",
+    "Energy must not be inferred from processor TDP."
+  ]
+}
