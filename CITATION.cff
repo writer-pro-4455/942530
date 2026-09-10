@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript."
+title: "Lightweight Edge AI Framework for Real-Time Maize Disease Detection"
+type: software
+authors:
+  - family-names: "Basha"
+    given-names: "M."
+  - family-names: "Singh"
+    given-names: "D. Narendar"
+  - family-names: "Prasad"
+    given-names: "G. Venkata Hari"
+version: 1.0.0
+date-released: 2026-09-10
+license: MIT
+repository-code: "https://github.com/writer-pro-4455/942530"
