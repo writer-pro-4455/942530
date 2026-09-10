@@ -1,0 +1,23 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+.env
+
+# Datasets
+data/primary/
+data/plantdoc/
+data/splits/*.csv
+
+# Trained artifacts
+models/*.keras
+models/*.h5
+models/*.tflite
+
+# Generated results
+results/**/*
+!results/README.md
+!results/manuscript_reference_metrics.csv
