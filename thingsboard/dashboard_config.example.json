@@ -1,0 +1,62 @@
+{
+  "artifact_type": "repository_side_example_configuration",
+  "warning": "This is not an exported ThingsBoard dashboard JSON. Replace with the actual authors' export before manuscript resubmission.",
+  "telemetry_keys": [
+    "disease_prediction",
+    "confidence",
+    "alert_level",
+    "inference_latency_ms",
+    "temperature_c",
+    "humidity_pct",
+    "soil_moisture_pct",
+    "illuminance_lux",
+    "battery_v"
+  ],
+  "widgets": [
+    {
+      "title": "Disease Prediction",
+      "type": "latest_value",
+      "key": "disease_prediction"
+    },
+    {
+      "title": "Prediction Confidence",
+      "type": "latest_value",
+      "key": "confidence"
+    },
+    {
+      "title": "Alert Level",
+      "type": "latest_value",
+      "key": "alert_level"
+    },
+    {
+      "title": "Inference Latency",
+      "type": "time_series",
+      "key": "inference_latency_ms"
+    },
+    {
+      "title": "Temperature (simulated demo only)",
+      "type": "time_series",
+      "key": "temperature_c"
+    },
+    {
+      "title": "Humidity (simulated demo only)",
+      "type": "time_series",
+      "key": "humidity_pct"
+    },
+    {
+      "title": "Soil Moisture (simulated demo only)",
+      "type": "time_series",
+      "key": "soil_moisture_pct"
+    },
+    {
+      "title": "Battery Voltage (simulated demo only)",
+      "type": "time_series",
+      "key": "battery_v"
+    }
+  ],
+  "alert_policy": {
+    "HIGH": "disease_prediction != Healthy AND confidence >= 0.80",
+    "MEDIUM": "disease_prediction != Healthy AND confidence < 0.80",
+    "NONE": "disease_prediction == Healthy"
+  }
+}
